@@ -31,14 +31,20 @@ namespace MelaninaPrata
         }
         private void btnVendedores_Click(object sender, EventArgs e)
         {
-            openChildForm(new Vendedores());
+            //openChildForm(new Vendedores());
 
             //Oculta subMenu
-            hideSubMenu();
+            //hideSubMenu();
         }
         private void btnProdutos_Click(object sender, EventArgs e)
         {
-            openChildForm(new Produtos());
+            //openChildForm(new Produtos());
+
+            //Oculta subMenu
+            //hideSubMenu();
+        }
+        private void btnGrupos_Click(object sender, EventArgs e)
+        {
 
             //Oculta subMenu
             hideSubMenu();
@@ -115,8 +121,9 @@ namespace MelaninaPrata
             childForm.BringToFront();
             childForm.Show();
         }
+
         #endregion
 
-
+        
     }
 }
