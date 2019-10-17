@@ -31,6 +31,7 @@ namespace MelaninaPrata
         }
         private void btnVendedores_Click(object sender, EventArgs e)
         {
+            openChildForm(new Vendedores());
 
             //Oculta subMenu
             hideSubMenu();
@@ -38,7 +39,7 @@ namespace MelaninaPrata
         private void btnProdutos_Click(object sender, EventArgs e)
         {
             openChildForm(new Produtos());
-            
+
             //Oculta subMenu
             hideSubMenu();
         }
@@ -55,6 +56,11 @@ namespace MelaninaPrata
         private void btnAcertar_Click(object sender, EventArgs e)
         {
             //Oculta subMenu
+            hideSubMenu();
+        }
+        //Panel Menu Lateral
+        private void PanelMenuLateral_Click(object sender, EventArgs e)
+        {
             hideSubMenu();
         }
         #endregion
@@ -109,7 +115,6 @@ namespace MelaninaPrata
             childForm.BringToFront();
             childForm.Show();
         }
-
         #endregion
 
 

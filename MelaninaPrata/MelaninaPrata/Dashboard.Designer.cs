@@ -30,26 +30,27 @@ namespace MelaninaPrata
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.PanelMenuLateral = new System.Windows.Forms.Panel();
+            this.PanelSubMenuConsignado = new System.Windows.Forms.Panel();
+            this.btnAcertar = new System.Windows.Forms.Button();
+            this.btnNovoConsignado = new System.Windows.Forms.Button();
+            this.btnConsigacao = new System.Windows.Forms.Button();
             this.PanelSubMenuCadastros = new System.Windows.Forms.Panel();
             this.btnVendedores = new System.Windows.Forms.Button();
             this.btnProdutos = new System.Windows.Forms.Button();
             this.btnCadastros = new System.Windows.Forms.Button();
             this.PanelLogo = new System.Windows.Forms.Panel();
             this.PanelFormFilhos = new System.Windows.Forms.Panel();
-            this.btnConsigacao = new System.Windows.Forms.Button();
-            this.PanelSubMenuConsignado = new System.Windows.Forms.Panel();
-            this.btnNovoConsignado = new System.Windows.Forms.Button();
-            this.btnAcertar = new System.Windows.Forms.Button();
             this.PanelMenuLateral.SuspendLayout();
-            this.PanelSubMenuCadastros.SuspendLayout();
             this.PanelSubMenuConsignado.SuspendLayout();
+            this.PanelSubMenuCadastros.SuspendLayout();
             this.SuspendLayout();
             // 
             // PanelMenuLateral
             // 
             this.PanelMenuLateral.AutoScroll = true;
-            this.PanelMenuLateral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.PanelMenuLateral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(122)))), ((int)(((byte)(107)))));
             this.PanelMenuLateral.Controls.Add(this.PanelSubMenuConsignado);
             this.PanelMenuLateral.Controls.Add(this.btnConsigacao);
             this.PanelMenuLateral.Controls.Add(this.PanelSubMenuCadastros);
@@ -61,6 +62,75 @@ namespace MelaninaPrata
             this.PanelMenuLateral.Name = "PanelMenuLateral";
             this.PanelMenuLateral.Size = new System.Drawing.Size(200, 561);
             this.PanelMenuLateral.TabIndex = 0;
+            this.PanelMenuLateral.Click += new System.EventHandler(this.PanelMenuLateral_Click);
+            // 
+            // PanelSubMenuConsignado
+            // 
+            this.PanelSubMenuConsignado.Controls.Add(this.btnAcertar);
+            this.PanelSubMenuConsignado.Controls.Add(this.btnNovoConsignado);
+            this.PanelSubMenuConsignado.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PanelSubMenuConsignado.Location = new System.Drawing.Point(0, 261);
+            this.PanelSubMenuConsignado.Name = "PanelSubMenuConsignado";
+            this.PanelSubMenuConsignado.Size = new System.Drawing.Size(200, 85);
+            this.PanelSubMenuConsignado.TabIndex = 4;
+            // 
+            // btnAcertar
+            // 
+            this.btnAcertar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(79)))), ((int)(((byte)(80)))));
+            this.btnAcertar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAcertar.FlatAppearance.BorderSize = 0;
+            this.btnAcertar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAcertar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAcertar.ForeColor = System.Drawing.Color.White;
+            this.btnAcertar.Image = ((System.Drawing.Image)(resources.GetObject("btnAcertar.Image")));
+            this.btnAcertar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAcertar.Location = new System.Drawing.Point(0, 40);
+            this.btnAcertar.Name = "btnAcertar";
+            this.btnAcertar.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnAcertar.Size = new System.Drawing.Size(200, 40);
+            this.btnAcertar.TabIndex = 2;
+            this.btnAcertar.Text = "          Fechar";
+            this.btnAcertar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAcertar.UseVisualStyleBackColor = false;
+            this.btnAcertar.Click += new System.EventHandler(this.btnAcertar_Click);
+            // 
+            // btnNovoConsignado
+            // 
+            this.btnNovoConsignado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(79)))), ((int)(((byte)(80)))));
+            this.btnNovoConsignado.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnNovoConsignado.FlatAppearance.BorderSize = 0;
+            this.btnNovoConsignado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNovoConsignado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNovoConsignado.ForeColor = System.Drawing.Color.White;
+            this.btnNovoConsignado.Image = ((System.Drawing.Image)(resources.GetObject("btnNovoConsignado.Image")));
+            this.btnNovoConsignado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNovoConsignado.Location = new System.Drawing.Point(0, 0);
+            this.btnNovoConsignado.Name = "btnNovoConsignado";
+            this.btnNovoConsignado.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnNovoConsignado.Size = new System.Drawing.Size(200, 40);
+            this.btnNovoConsignado.TabIndex = 1;
+            this.btnNovoConsignado.Text = "          Novo";
+            this.btnNovoConsignado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNovoConsignado.UseVisualStyleBackColor = false;
+            this.btnNovoConsignado.Click += new System.EventHandler(this.btnNovoConsignado_Click);
+            // 
+            // btnConsigacao
+            // 
+            this.btnConsigacao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(122)))), ((int)(((byte)(107)))));
+            this.btnConsigacao.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnConsigacao.FlatAppearance.BorderSize = 0;
+            this.btnConsigacao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsigacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsigacao.ForeColor = System.Drawing.Color.White;
+            this.btnConsigacao.Location = new System.Drawing.Point(0, 216);
+            this.btnConsigacao.Name = "btnConsigacao";
+            this.btnConsigacao.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnConsigacao.Size = new System.Drawing.Size(200, 45);
+            this.btnConsigacao.TabIndex = 3;
+            this.btnConsigacao.Text = "Consignado";
+            this.btnConsigacao.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConsigacao.UseVisualStyleBackColor = false;
+            this.btnConsigacao.Click += new System.EventHandler(this.btnConsigacao_Click);
             // 
             // PanelSubMenuCadastros
             // 
@@ -81,13 +151,14 @@ namespace MelaninaPrata
             this.btnVendedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVendedores.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVendedores.ForeColor = System.Drawing.Color.White;
+            this.btnVendedores.Image = ((System.Drawing.Image)(resources.GetObject("btnVendedores.Image")));
             this.btnVendedores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVendedores.Location = new System.Drawing.Point(0, 40);
             this.btnVendedores.Name = "btnVendedores";
             this.btnVendedores.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.btnVendedores.Size = new System.Drawing.Size(200, 40);
             this.btnVendedores.TabIndex = 1;
-            this.btnVendedores.Text = "Vendedores";
+            this.btnVendedores.Text = "          Vendedores";
             this.btnVendedores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVendedores.UseVisualStyleBackColor = false;
             this.btnVendedores.Click += new System.EventHandler(this.btnVendedores_Click);
@@ -100,19 +171,21 @@ namespace MelaninaPrata
             this.btnProdutos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProdutos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProdutos.ForeColor = System.Drawing.Color.White;
+            this.btnProdutos.Image = ((System.Drawing.Image)(resources.GetObject("btnProdutos.Image")));
+            this.btnProdutos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnProdutos.Location = new System.Drawing.Point(0, 0);
             this.btnProdutos.Name = "btnProdutos";
             this.btnProdutos.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.btnProdutos.Size = new System.Drawing.Size(200, 40);
             this.btnProdutos.TabIndex = 0;
-            this.btnProdutos.Text = "Produtos";
+            this.btnProdutos.Text = "          Produtos";
             this.btnProdutos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnProdutos.UseVisualStyleBackColor = false;
             this.btnProdutos.Click += new System.EventHandler(this.btnProdutos_Click);
             // 
             // btnCadastros
             // 
-            this.btnCadastros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(90)))), ((int)(((byte)(91)))));
+            this.btnCadastros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(122)))), ((int)(((byte)(107)))));
             this.btnCadastros.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCadastros.FlatAppearance.BorderSize = 0;
             this.btnCadastros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -130,6 +203,7 @@ namespace MelaninaPrata
             // 
             // PanelLogo
             // 
+            this.PanelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(122)))), ((int)(((byte)(107)))));
             this.PanelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelLogo.Location = new System.Drawing.Point(0, 0);
             this.PanelLogo.Name = "PanelLogo";
@@ -144,70 +218,6 @@ namespace MelaninaPrata
             this.PanelFormFilhos.Size = new System.Drawing.Size(734, 561);
             this.PanelFormFilhos.TabIndex = 1;
             // 
-            // btnConsigacao
-            // 
-            this.btnConsigacao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(90)))), ((int)(((byte)(91)))));
-            this.btnConsigacao.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnConsigacao.FlatAppearance.BorderSize = 0;
-            this.btnConsigacao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsigacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsigacao.ForeColor = System.Drawing.Color.White;
-            this.btnConsigacao.Location = new System.Drawing.Point(0, 216);
-            this.btnConsigacao.Name = "btnConsigacao";
-            this.btnConsigacao.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnConsigacao.Size = new System.Drawing.Size(200, 45);
-            this.btnConsigacao.TabIndex = 3;
-            this.btnConsigacao.Text = "Consignado";
-            this.btnConsigacao.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsigacao.UseVisualStyleBackColor = false;
-            this.btnConsigacao.Click += new System.EventHandler(this.btnConsigacao_Click);
-            // 
-            // PanelSubMenuConsignado
-            // 
-            this.PanelSubMenuConsignado.Controls.Add(this.btnAcertar);
-            this.PanelSubMenuConsignado.Controls.Add(this.btnNovoConsignado);
-            this.PanelSubMenuConsignado.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanelSubMenuConsignado.Location = new System.Drawing.Point(0, 261);
-            this.PanelSubMenuConsignado.Name = "PanelSubMenuConsignado";
-            this.PanelSubMenuConsignado.Size = new System.Drawing.Size(200, 85);
-            this.PanelSubMenuConsignado.TabIndex = 4;
-            // 
-            // btnNovoConsignado
-            // 
-            this.btnNovoConsignado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(79)))), ((int)(((byte)(80)))));
-            this.btnNovoConsignado.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnNovoConsignado.FlatAppearance.BorderSize = 0;
-            this.btnNovoConsignado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNovoConsignado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNovoConsignado.ForeColor = System.Drawing.Color.White;
-            this.btnNovoConsignado.Location = new System.Drawing.Point(0, 0);
-            this.btnNovoConsignado.Name = "btnNovoConsignado";
-            this.btnNovoConsignado.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnNovoConsignado.Size = new System.Drawing.Size(200, 40);
-            this.btnNovoConsignado.TabIndex = 1;
-            this.btnNovoConsignado.Text = "Novo";
-            this.btnNovoConsignado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNovoConsignado.UseVisualStyleBackColor = false;
-            this.btnNovoConsignado.Click += new System.EventHandler(this.btnNovoConsignado_Click);
-            // 
-            // btnAcertar
-            // 
-            this.btnAcertar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(79)))), ((int)(((byte)(80)))));
-            this.btnAcertar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAcertar.FlatAppearance.BorderSize = 0;
-            this.btnAcertar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAcertar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAcertar.ForeColor = System.Drawing.Color.White;
-            this.btnAcertar.Location = new System.Drawing.Point(0, 40);
-            this.btnAcertar.Name = "btnAcertar";
-            this.btnAcertar.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnAcertar.Size = new System.Drawing.Size(200, 40);
-            this.btnAcertar.TabIndex = 2;
-            this.btnAcertar.Text = "Fechar";
-            this.btnAcertar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAcertar.UseVisualStyleBackColor = false;
-            this.btnAcertar.Click += new System.EventHandler(this.btnAcertar_Click);
-            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -221,10 +231,10 @@ namespace MelaninaPrata
             this.Name = "Dashboard";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Text = "Melanina Prata - Sistema de Consignado";
             this.PanelMenuLateral.ResumeLayout(false);
-            this.PanelSubMenuCadastros.ResumeLayout(false);
             this.PanelSubMenuConsignado.ResumeLayout(false);
+            this.PanelSubMenuCadastros.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
