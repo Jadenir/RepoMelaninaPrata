@@ -89,7 +89,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\icons8-adicionar-grupo-de-usuários-homem-homem-25.png" />
-    <Content Include="Assets\icons8-adicionar-grupo-de-usuários-homem-homem-50.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
