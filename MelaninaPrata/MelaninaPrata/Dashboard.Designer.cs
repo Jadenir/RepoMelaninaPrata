@@ -37,12 +37,12 @@ namespace MelaninaPrata
             this.btnNovoConsignado = new System.Windows.Forms.Button();
             this.btnConsigacao = new System.Windows.Forms.Button();
             this.PanelSubMenuCadastros = new System.Windows.Forms.Panel();
-            this.btnVendedores = new System.Windows.Forms.Button();
+            this.btnGrupos = new System.Windows.Forms.Button();
+            this.btnPessoas = new System.Windows.Forms.Button();
             this.btnProdutos = new System.Windows.Forms.Button();
             this.btnCadastros = new System.Windows.Forms.Button();
             this.PanelLogo = new System.Windows.Forms.Panel();
             this.PanelFormFilhos = new System.Windows.Forms.Panel();
-            this.btnGrupos = new System.Windows.Forms.Button();
             this.PanelMenuLateral.SuspendLayout();
             this.PanelSubMenuConsignado.SuspendLayout();
             this.PanelSubMenuCadastros.SuspendLayout();
@@ -51,7 +51,7 @@ namespace MelaninaPrata
             // PanelMenuLateral
             // 
             this.PanelMenuLateral.AutoScroll = true;
-            this.PanelMenuLateral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(122)))), ((int)(((byte)(107)))));
+            this.PanelMenuLateral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(122)))), ((int)(((byte)(107)))));
             this.PanelMenuLateral.Controls.Add(this.PanelSubMenuConsignado);
             this.PanelMenuLateral.Controls.Add(this.btnConsigacao);
             this.PanelMenuLateral.Controls.Add(this.PanelSubMenuCadastros);
@@ -117,7 +117,7 @@ namespace MelaninaPrata
             // 
             // btnConsigacao
             // 
-            this.btnConsigacao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(122)))), ((int)(((byte)(107)))));
+            this.btnConsigacao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(122)))), ((int)(((byte)(107)))));
             this.btnConsigacao.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnConsigacao.FlatAppearance.BorderSize = 0;
             this.btnConsigacao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -137,7 +137,7 @@ namespace MelaninaPrata
             // 
             this.PanelSubMenuCadastros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(79)))), ((int)(((byte)(80)))));
             this.PanelSubMenuCadastros.Controls.Add(this.btnGrupos);
-            this.PanelSubMenuCadastros.Controls.Add(this.btnVendedores);
+            this.PanelSubMenuCadastros.Controls.Add(this.btnPessoas);
             this.PanelSubMenuCadastros.Controls.Add(this.btnProdutos);
             this.PanelSubMenuCadastros.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelSubMenuCadastros.Location = new System.Drawing.Point(0, 131);
@@ -145,25 +145,45 @@ namespace MelaninaPrata
             this.PanelSubMenuCadastros.Size = new System.Drawing.Size(200, 120);
             this.PanelSubMenuCadastros.TabIndex = 2;
             // 
-            // btnVendedores
+            // btnGrupos
             // 
-            this.btnVendedores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(79)))), ((int)(((byte)(80)))));
-            this.btnVendedores.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnVendedores.FlatAppearance.BorderSize = 0;
-            this.btnVendedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVendedores.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVendedores.ForeColor = System.Drawing.Color.White;
-            this.btnVendedores.Image = ((System.Drawing.Image)(resources.GetObject("btnVendedores.Image")));
-            this.btnVendedores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVendedores.Location = new System.Drawing.Point(0, 40);
-            this.btnVendedores.Name = "btnVendedores";
-            this.btnVendedores.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnVendedores.Size = new System.Drawing.Size(200, 40);
-            this.btnVendedores.TabIndex = 1;
-            this.btnVendedores.Text = "          Vendedores";
-            this.btnVendedores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVendedores.UseVisualStyleBackColor = false;
-            this.btnVendedores.Click += new System.EventHandler(this.btnVendedores_Click);
+            this.btnGrupos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(79)))), ((int)(((byte)(80)))));
+            this.btnGrupos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnGrupos.FlatAppearance.BorderSize = 0;
+            this.btnGrupos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGrupos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGrupos.ForeColor = System.Drawing.Color.White;
+            this.btnGrupos.Image = ((System.Drawing.Image)(resources.GetObject("btnGrupos.Image")));
+            this.btnGrupos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGrupos.Location = new System.Drawing.Point(0, 80);
+            this.btnGrupos.Name = "btnGrupos";
+            this.btnGrupos.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnGrupos.Size = new System.Drawing.Size(200, 40);
+            this.btnGrupos.TabIndex = 2;
+            this.btnGrupos.Text = "          Grupos";
+            this.btnGrupos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGrupos.UseVisualStyleBackColor = false;
+            this.btnGrupos.Click += new System.EventHandler(this.btnGrupos_Click);
+            // 
+            // btnPessoas
+            // 
+            this.btnPessoas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(79)))), ((int)(((byte)(80)))));
+            this.btnPessoas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPessoas.FlatAppearance.BorderSize = 0;
+            this.btnPessoas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPessoas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPessoas.ForeColor = System.Drawing.Color.White;
+            this.btnPessoas.Image = ((System.Drawing.Image)(resources.GetObject("btnPessoas.Image")));
+            this.btnPessoas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPessoas.Location = new System.Drawing.Point(0, 40);
+            this.btnPessoas.Name = "btnPessoas";
+            this.btnPessoas.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnPessoas.Size = new System.Drawing.Size(200, 40);
+            this.btnPessoas.TabIndex = 1;
+            this.btnPessoas.Text = "          Pessoas";
+            this.btnPessoas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPessoas.UseVisualStyleBackColor = false;
+            this.btnPessoas.Click += new System.EventHandler(this.btnVendedores_Click);
             // 
             // btnProdutos
             // 
@@ -187,7 +207,7 @@ namespace MelaninaPrata
             // 
             // btnCadastros
             // 
-            this.btnCadastros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(122)))), ((int)(((byte)(107)))));
+            this.btnCadastros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(122)))), ((int)(((byte)(107)))));
             this.btnCadastros.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCadastros.FlatAppearance.BorderSize = 0;
             this.btnCadastros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -206,6 +226,8 @@ namespace MelaninaPrata
             // PanelLogo
             // 
             this.PanelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(122)))), ((int)(((byte)(107)))));
+            this.PanelLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PanelLogo.BackgroundImage")));
+            this.PanelLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.PanelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelLogo.Location = new System.Drawing.Point(0, 0);
             this.PanelLogo.Name = "PanelLogo";
@@ -221,26 +243,6 @@ namespace MelaninaPrata
             this.PanelFormFilhos.Size = new System.Drawing.Size(734, 561);
             this.PanelFormFilhos.TabIndex = 1;
             // 
-            // btnGrupos
-            // 
-            this.btnGrupos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(79)))), ((int)(((byte)(80)))));
-            this.btnGrupos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnGrupos.FlatAppearance.BorderSize = 0;
-            this.btnGrupos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGrupos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGrupos.ForeColor = System.Drawing.Color.White;
-            this.btnGrupos.Image = ((System.Drawing.Image)(resources.GetObject("btnGrupos.Image")));
-            this.btnGrupos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGrupos.Location = new System.Drawing.Point(0, 80);
-            this.btnGrupos.Name = "btnGrupos";
-            this.btnGrupos.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnGrupos.Size = new System.Drawing.Size(200, 40);
-            this.btnGrupos.TabIndex = 2;
-            this.btnGrupos.Text = "          Grupos";
-            this.btnGrupos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGrupos.UseVisualStyleBackColor = false;
-            this.btnGrupos.Click += new System.EventHandler(this.btnGrupos_Click);
-            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -255,6 +257,7 @@ namespace MelaninaPrata
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Melanina Prata - Sistema de Consignado";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.PanelMenuLateral.ResumeLayout(false);
             this.PanelSubMenuConsignado.ResumeLayout(false);
             this.PanelSubMenuCadastros.ResumeLayout(false);
@@ -266,7 +269,7 @@ namespace MelaninaPrata
 
         private System.Windows.Forms.Panel PanelMenuLateral;
         private System.Windows.Forms.Panel PanelSubMenuCadastros;
-        private System.Windows.Forms.Button btnVendedores;
+        private System.Windows.Forms.Button btnPessoas;
         private System.Windows.Forms.Button btnProdutos;
         private System.Windows.Forms.Button btnCadastros;
         private System.Windows.Forms.Panel PanelLogo;

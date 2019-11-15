@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
 namespace MelaninaPrata
 {
     public partial class Dashboard : Form
@@ -31,23 +30,23 @@ namespace MelaninaPrata
         }
         private void btnVendedores_Click(object sender, EventArgs e)
         {
-            //openChildForm(new Vendedores());
+            openChildForm(new Views.frmPessoas());
 
             //Oculta subMenu
             //hideSubMenu();
         }
         private void btnProdutos_Click(object sender, EventArgs e)
         {
-            //openChildForm(new Produtos());
+            openChildForm(new Views.frmProdutos());
 
             //Oculta subMenu
             //hideSubMenu();
         }
         private void btnGrupos_Click(object sender, EventArgs e)
         {
-
+            openChildForm(new Views.frmGrupos());
             //Oculta subMenu
-            hideSubMenu();
+            //hideSubMenu();
         }
         //Menu Consignados
         private void btnConsigacao_Click(object sender, EventArgs e)
@@ -57,12 +56,12 @@ namespace MelaninaPrata
         private void btnNovoConsignado_Click(object sender, EventArgs e)
         {
             //Oculta subMenu
-            hideSubMenu();
+            //hideSubMenu();
         }
         private void btnAcertar_Click(object sender, EventArgs e)
         {
             //Oculta subMenu
-            hideSubMenu();
+            //hideSubMenu();
         }
         //Panel Menu Lateral
         private void PanelMenuLateral_Click(object sender, EventArgs e)
