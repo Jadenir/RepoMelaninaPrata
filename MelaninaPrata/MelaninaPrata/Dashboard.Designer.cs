@@ -257,7 +257,7 @@ namespace MelaninaPrata
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Melanina Prata - Sistema de Consignado";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Dashboard_Load);
             this.PanelMenuLateral.ResumeLayout(false);
             this.PanelSubMenuConsignado.ResumeLayout(false);
             this.PanelSubMenuCadastros.ResumeLayout(false);

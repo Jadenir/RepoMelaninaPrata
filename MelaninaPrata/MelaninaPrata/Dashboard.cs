@@ -22,6 +22,14 @@ namespace MelaninaPrata
         private Form activeForm = null;
         #endregion
 
+        #region "Eventos"
+        //Load
+        private void Dashboard_Load(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
+
         #region Clicks
         //Menu Cadastros
         private void btnCadastros_Click(object sender, EventArgs e)
@@ -121,8 +129,9 @@ namespace MelaninaPrata
             childForm.Show();
         }
 
+
         #endregion
 
-        
+
     }
 }

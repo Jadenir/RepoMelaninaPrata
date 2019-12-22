@@ -7,15 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.VisualBasic;
+using MelaninaUtils;
 
 namespace UserControll
 {
     public partial class txtNumeric : UserControl
     {
+        //Inicializa o componente
         public txtNumeric()
         {
             InitializeComponent();
         }
+        //
         public string Text
         {
             get
@@ -35,5 +39,14 @@ namespace UserControll
                 e.Handled = true;
             }
         }
+        //TextChanged
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            if (!Utils.IsNumeric(textBox1.Text))
+            {
+                textBox1.Clear();
+            }
+        }
     }
 }
+
