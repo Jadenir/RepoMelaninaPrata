@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MelaninaModels;
+using MelaninaControllers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows;
 
 namespace MelaninaPrata.Views
 {
@@ -27,6 +30,24 @@ namespace MelaninaPrata.Views
             txtCodigo.Text = "";
             txtDescricao.Text = "";
             dgvGrupos.DataSource = null;
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (txtDescricao.Text == string.Empty)
+            {
+                MessageBox.Show("Informe a descrição do grupo.");
+                return;
+            }
+            Grupo grupo = SalvarGrupos();
+            GrupoController.SalvarGrupo(grupo);
+        }
+
+        private Grupo SalvarGrupos()
+        {
+            Grupo objGrupo = new Grupo();
+            objGrupo.Descricao = txtDescricao.Text;
+            return objGrupo;
         }
     }
 }

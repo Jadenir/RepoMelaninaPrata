@@ -161,6 +161,14 @@
     <Content Include="Assets\logo2.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MelaninaControllers\MelaninaControllers.csproj">
+      <Project>{46b14662-47ff-41d0-9849-4ea643cd141d}</Project>
+      <Name>MelaninaControllers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MelaninaModels\MelaninaModels.csproj">
+      <Project>{f8379c17-546a-4c55-b44c-e2133df4f3d9}</Project>
+      <Name>MelaninaModels</Name>
+    </ProjectReference>
     <ProjectReference Include="..\UserControll\UserControll.csproj">
       <Project>{07199b31-3442-4e5b-ae0e-87f38d3437f3}</Project>
       <Name>UserControll</Name>

@@ -74,6 +74,7 @@
             this.btnSave.Size = new System.Drawing.Size(42, 44);
             this.btnSave.Text = "Salvar";
             this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnDelete
             // 
