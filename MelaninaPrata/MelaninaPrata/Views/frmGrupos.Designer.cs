@@ -39,6 +39,8 @@
             this.txtDescricao = new System.Windows.Forms.TextBox();
             this.lblDescricao = new System.Windows.Forms.Label();
             this.dgvGrupos = new System.Windows.Forms.DataGridView();
+            this.ColunaId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColunaDescricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtCodigo = new UserControll.txtNumeric();
             this.tollStipTopMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrupos)).BeginInit();
@@ -86,6 +88,7 @@
             this.btnDelete.Size = new System.Drawing.Size(45, 44);
             this.btnDelete.Text = "Excluir";
             this.btnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnClear
             // 
@@ -143,15 +146,39 @@
             // 
             // dgvGrupos
             // 
+            this.dgvGrupos.AllowUserToAddRows = false;
+            this.dgvGrupos.AllowUserToDeleteRows = false;
+            this.dgvGrupos.AllowUserToResizeColumns = false;
+            this.dgvGrupos.AllowUserToResizeRows = false;
             this.dgvGrupos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.dgvGrupos.BackgroundColor = System.Drawing.Color.White;
             this.dgvGrupos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvGrupos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColunaId,
+            this.ColunaDescricao});
             this.dgvGrupos.Location = new System.Drawing.Point(12, 104);
             this.dgvGrupos.Name = "dgvGrupos";
+            this.dgvGrupos.RowHeadersVisible = false;
+            this.dgvGrupos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvGrupos.Size = new System.Drawing.Size(337, 445);
             this.dgvGrupos.TabIndex = 4;
             this.dgvGrupos.TabStop = false;
+            this.dgvGrupos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGrupos_CellDoubleClick);
+            // 
+            // ColunaId
+            // 
+            this.ColunaId.HeaderText = "ID";
+            this.ColunaId.Name = "ColunaId";
+            this.ColunaId.ReadOnly = true;
+            this.ColunaId.Width = 50;
+            // 
+            // ColunaDescricao
+            // 
+            this.ColunaDescricao.HeaderText = "Descrição";
+            this.ColunaDescricao.Name = "ColunaDescricao";
+            this.ColunaDescricao.ReadOnly = true;
+            this.ColunaDescricao.Width = 250;
             // 
             // txtCodigo
             // 
@@ -175,6 +202,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmGrupos";
             this.Text = "frmGrupos";
+            this.Load += new System.EventHandler(this.frmGrupos_Load);
             this.tollStipTopMenu.ResumeLayout(false);
             this.tollStipTopMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrupos)).EndInit();
@@ -196,5 +224,7 @@
         private System.Windows.Forms.Label lblDescricao;
         private System.Windows.Forms.DataGridView dgvGrupos;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColunaId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColunaDescricao;
     }
 }

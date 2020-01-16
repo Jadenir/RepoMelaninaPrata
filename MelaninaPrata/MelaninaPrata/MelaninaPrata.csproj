@@ -35,6 +35,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
@@ -56,6 +62,8 @@
     <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.6.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Text.Encodings.Web, Version=4.0.4.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Text.Encodings.Web.4.6.0\lib\netstandard2.0\System.Text.Encodings.Web.dll</HintPath>
     </Reference>
@@ -80,6 +88,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\ContextoSingleton.cs" />
+    <Compile Include="Controllers\GrupoController.cs" />
+    <Compile Include="Models\cidade.cs">
+      <DependentUpon>MelaninaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\grupos.cs">
+      <DependentUpon>MelaninaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MelaninaModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MelaninaModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MelaninaModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MelaninaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MelaninaModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MelaninaModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\pessoa.cs">
+      <DependentUpon>MelaninaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\produto.cs">
+      <DependentUpon>MelaninaModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Dashboard.cs">
@@ -128,6 +165,13 @@
     <EmbeddedResource Include="Views\frmVendedores.resx">
       <DependentUpon>frmVendedores.cs</DependentUpon>
     </EmbeddedResource>
+    <EntityDeploy Include="Models\MelaninaModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>MelaninaModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Models\MelaninaModel.edmx.diagram">
+      <DependentUpon>MelaninaModel.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -159,21 +203,25 @@
     <Content Include="Assets\icons8-vérifier-25.png" />
     <Content Include="Assets\logo.jpeg" />
     <Content Include="Assets\logo2.jpg" />
+    <Content Include="Models\MelaninaModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>MelaninaModel.Context.cs</LastGenOutput>
+      <DependentUpon>MelaninaModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\MelaninaModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MelaninaModel.edmx</DependentUpon>
+      <LastGenOutput>MelaninaModel.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MelaninaControllers\MelaninaControllers.csproj">
-      <Project>{46b14662-47ff-41d0-9849-4ea643cd141d}</Project>
-      <Name>MelaninaControllers</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\MelaninaModels\MelaninaModels.csproj">
-      <Project>{f8379c17-546a-4c55-b44c-e2133df4f3d9}</Project>
-      <Name>MelaninaModels</Name>
-    </ProjectReference>
     <ProjectReference Include="..\UserControll\UserControll.csproj">
       <Project>{07199b31-3442-4e5b-ae0e-87f38d3437f3}</Project>
       <Name>UserControll</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
