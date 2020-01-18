@@ -41,7 +41,7 @@ namespace MelaninaPrata.Controllers
         public static grupos BuscaGrupoPorID(int id)
         {
             grupos grupo = ContextoSingleton.Instancia.grupos.Find(id);
-            return grupo;//ContextoSingleton.Instancia.grupos.ToList();
+            return grupo;
         }
         //Lista todos os grupos
         public static List<grupos> ListarTodosGrupos()
