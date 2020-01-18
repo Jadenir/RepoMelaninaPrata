@@ -7,7 +7,7 @@
       <Diagram DiagramId="363fd09453d043459ebb40ce9d3f382a" Name="Diagram1">
         <EntityTypeShape EntityType="DBMelaninaModel.cidade" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DBMelaninaModel.grupos" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="DBMelaninaModel.pessoa" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBMelaninaModel.pessoa" Width="1.5" PointX="4.875" PointY="1.5" IsExpanded="true" />
         <EntityTypeShape EntityType="DBMelaninaModel.produto" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <AssociationConnector Association="DBMelaninaModel.FK_produtos_grupos" ManuallyRouted="false" />
       </Diagram>

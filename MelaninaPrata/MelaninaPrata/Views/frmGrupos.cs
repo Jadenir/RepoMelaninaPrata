@@ -36,13 +36,19 @@ namespace MelaninaPrata.Views
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
+            //Valida se foi informada descrição
             if (txtDescricao.Text == string.Empty)
             {
                 MessageBox.Show("Informe a descrição do grupo.");
                 return;
             }
+            //Mota objeto de grupo para salvar
             grupos grupo = pMontaObjGrupo();
+            //Salva grupo
             GrupoController.SalvarGrupo(grupo);
+            MessageBox.Show("Grupo gravado com sucesso.");
+            //Limpa os campos
+            btnClear_Click(sender, e);
         }
         private void btnDelete_Click(object sender, EventArgs e)
         {
@@ -56,9 +62,9 @@ namespace MelaninaPrata.Views
                 return;
             }
             //Consulta grupo por ID
-            grupos objGrupo = GrupoController.ListarGrupoPorID(codigo);
+            grupos objGrupos = GrupoController.BuscaGrupoPorID(codigo);
             //Valida se grupo existe
-            if (objGrupo == null)
+            if (objGrupos == null)
             {
                 MessageBox.Show("O grupo não está cadastrado.");
                 return;
@@ -66,6 +72,8 @@ namespace MelaninaPrata.Views
             //Exclui o grupo
             GrupoController.ExcluirGrupo(Convert.ToInt32(txtCodigo.Text.ToString()));
             MessageBox.Show("Grupo excluído com sucesso.");
+            //Repopula grid
+            btnClear_Click(sender, e);
         }
 
         //DoubleClick
@@ -90,7 +98,6 @@ namespace MelaninaPrata.Views
         }
         #endregion
         #region "Funções e Procedimentos"
-        //Procedimentos
         private grupos pMontaObjGrupo()
         {
             grupos objGrupo = new grupos();
@@ -99,10 +106,11 @@ namespace MelaninaPrata.Views
         }
         private void pPopulaGrupos()
         {
+            //Consulta todos os grupos
             List<grupos> objGrupos = GrupoController.ListarTodosGrupos();
             DataGridViewRow dgvr;
             dgvGrupos.Rows.Clear();
-
+            //Percorre o objeto para preencher a grid
             foreach (var item in objGrupos)
             {
                 dgvr = new DataGridViewRow();
@@ -113,7 +121,5 @@ namespace MelaninaPrata.Views
             }
         }
         #endregion
-
-
     }
 }

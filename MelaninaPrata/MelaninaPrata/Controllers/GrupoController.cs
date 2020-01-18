@@ -30,16 +30,18 @@ namespace MelaninaPrata.Controllers
         //Exclui o grupo
         public static void ExcluirGrupo(int id)
         {
+            //Consulta e retorna grupo
             grupos grupo = ContextoSingleton.Instancia.grupos.Find(id);
-
+            //Deleta registro da tabela
             ContextoSingleton.Instancia.Entry(grupo).State = EntityState.Deleted;
+            //Salva alteração na tabela
             ContextoSingleton.Instancia.SaveChanges();
         }
         //Lista por ID
-        public static List<grupos> ListarGrupoPorID(int id)
+        public static grupos BuscaGrupoPorID(int id)
         {
             grupos grupo = ContextoSingleton.Instancia.grupos.Find(id);
-            return ContextoSingleton.Instancia.grupos.ToList();
+            return grupo;//ContextoSingleton.Instancia.grupos.ToList();
         }
         //Lista todos os grupos
         public static List<grupos> ListarTodosGrupos()
