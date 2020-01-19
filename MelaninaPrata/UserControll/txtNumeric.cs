@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.VisualBasic;
 using MelaninaUtils;
+using System.Globalization;
 
 namespace UserControll
 {
@@ -46,6 +47,20 @@ namespace UserControll
             {
                 textBox1.Clear();
             }
+        }
+        //Leave
+        private void textBox1_Leave(object sender, EventArgs e)
+        {
+            if (textBox1.Text != string.Empty)
+            {
+                decimal valor = decimal.Parse(textBox1.Text.ToString());
+                textBox1.Text = valor.ToString("N2", CultureInfo.CurrentCulture);
+            }
+            else
+            {
+                textBox1.Text = "0,00";
+            }
+
         }
     }
 }

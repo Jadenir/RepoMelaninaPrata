@@ -14,6 +14,16 @@
           <Property Name="nome" Type="varchar" MaxLength="255" />
           <Property Name="uf" Type="int" />
         </EntityType>
+        <EntityType Name="estados">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="codigoUf" Type="int" Nullable="false" />
+          <Property Name="nome" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="uf" Type="char" MaxLength="2" Nullable="false" />
+          <Property Name="regiao" Type="int" Nullable="false" />
+        </EntityType>
         <EntityType Name="grupos">
           <Key>
             <PropertyRef Name="id" />
@@ -63,6 +73,7 @@
         </Association>
         <EntityContainer Name="DBMelaninaModelStoreContainer">
           <EntitySet Name="cidades" EntityType="Self.cidades" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="estados" EntityType="Self.estados" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="grupos" EntityType="Self.grupos" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="pessoas" EntityType="Self.pessoas" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="produtos" EntityType="Self.produtos" Schema="dbo" store:Type="Tables" />
@@ -142,7 +153,18 @@
             <End Role="grupos" EntitySet="grupos" />
             <End Role="produtos" EntitySet="produtos" />
           </AssociationSet>
+          <EntitySet Name="estados" EntityType="DBMelaninaModel.estado" />
         </EntityContainer>
+        <EntityType Name="estado">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="codigoUf" Type="Int32" Nullable="false" />
+          <Property Name="nome" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="uf" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="regiao" Type="Int32" Nullable="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -194,6 +216,17 @@
                 <ScalarProperty Name="valor" ColumnName="valor" />
                 <ScalarProperty Name="custo" ColumnName="custo" />
                 <ScalarProperty Name="grupoId" ColumnName="grupoId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="estados">
+            <EntityTypeMapping TypeName="DBMelaninaModel.estado">
+              <MappingFragment StoreEntitySet="estados">
+                <ScalarProperty Name="regiao" ColumnName="regiao" />
+                <ScalarProperty Name="uf" ColumnName="uf" />
+                <ScalarProperty Name="nome" ColumnName="nome" />
+                <ScalarProperty Name="codigoUf" ColumnName="codigoUf" />
+                <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

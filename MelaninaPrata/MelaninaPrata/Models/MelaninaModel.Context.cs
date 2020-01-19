@@ -29,5 +29,6 @@ namespace MelaninaPrata.Models
         public virtual DbSet<grupos> grupos { get; set; }
         public virtual DbSet<pessoa> pessoas { get; set; }
         public virtual DbSet<produto> produtos { get; set; }
+        public virtual DbSet<estado> estados { get; set; }
     }
 }

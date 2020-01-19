@@ -41,7 +41,7 @@
             this.dgvGrupos = new System.Windows.Forms.DataGridView();
             this.ColunaId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColunaDescricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtCodigo = new UserControll.txtNumeric();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
             this.tollStipTopMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrupos)).BeginInit();
             this.SuspendLayout();
@@ -182,10 +182,11 @@
             // 
             // txtCodigo
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(70, 52);
+            this.txtCodigo.Location = new System.Drawing.Point(70, 53);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(107, 20);
+            this.txtCodigo.Size = new System.Drawing.Size(100, 20);
             this.txtCodigo.TabIndex = 1;
+            this.txtCodigo.Leave += new System.EventHandler(this.txtCodigo_Leave);
             // 
             // frmGrupos
             // 
@@ -193,16 +194,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(734, 561);
+            this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.dgvGrupos);
             this.Controls.Add(this.lblDescricao);
             this.Controls.Add(this.txtDescricao);
             this.Controls.Add(this.lblCodigo);
-            this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.tollStipTopMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.KeyPreview = true;
             this.Name = "frmGrupos";
             this.Text = "frmGrupos";
             this.Load += new System.EventHandler(this.frmGrupos_Load);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmGrupos_KeyPress);
             this.tollStipTopMenu.ResumeLayout(false);
             this.tollStipTopMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrupos)).EndInit();
@@ -218,7 +221,6 @@
         private System.Windows.Forms.ToolStripButton btnDelete;
         private System.Windows.Forms.ToolStripButton btnClear;
         private System.Windows.Forms.ToolStripButton btnExit;
-        private UserControll.txtNumeric txtCodigo;
         private System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.TextBox txtDescricao;
         private System.Windows.Forms.Label lblDescricao;
@@ -226,5 +228,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColunaId;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColunaDescricao;
+        private System.Windows.Forms.TextBox txtCodigo;
     }
 }

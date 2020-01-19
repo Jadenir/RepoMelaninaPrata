@@ -4,12 +4,13 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="363fd09453d043459ebb40ce9d3f382a" Name="Diagram1">
-        <EntityTypeShape EntityType="DBMelaninaModel.cidade" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+      <Diagram DiagramId="363fd09453d043459ebb40ce9d3f382a" Name="Diagram1" ShowGrid="true">
+        <EntityTypeShape EntityType="DBMelaninaModel.cidade" Width="1.5" PointX="0.75" PointY="3.125" IsExpanded="true" />
         <EntityTypeShape EntityType="DBMelaninaModel.grupos" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="DBMelaninaModel.pessoa" Width="1.5" PointX="4.875" PointY="1.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="DBMelaninaModel.produto" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBMelaninaModel.pessoa" Width="1.5" PointX="4.625" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBMelaninaModel.produto" Width="1.5" PointX="2.875" PointY="0.5" IsExpanded="true" />
         <AssociationConnector Association="DBMelaninaModel.FK_produtos_grupos" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="DBMelaninaModel.estado" Width="1.5" PointX="2.875" PointY="3" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

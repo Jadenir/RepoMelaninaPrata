@@ -88,9 +88,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\CidadeController.cs" />
     <Compile Include="Controllers\ContextoSingleton.cs" />
     <Compile Include="Controllers\GrupoController.cs" />
+    <Compile Include="Controllers\PessoaController.cs" />
+    <Compile Include="Controllers\ProdutoController.cs" />
+    <Compile Include="Controllers\UfController.cs" />
     <Compile Include="Models\cidade.cs">
+      <DependentUpon>MelaninaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\estado.cs">
       <DependentUpon>MelaninaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\grupos.cs">

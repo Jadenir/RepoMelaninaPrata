@@ -35,6 +35,7 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -47,31 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="cmbUF.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="cmbUF.Designer.cs">
-      <DependentUpon>cmbUF.cs</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="txtCPF.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="txtCPF.Designer.cs">
-      <DependentUpon>txtCPF.cs</DependentUpon>
-    </Compile>
-    <Compile Include="txtCEP.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="txtCEP.Designer.cs">
-      <DependentUpon>txtCEP.cs</DependentUpon>
-    </Compile>
-    <Compile Include="txtFone.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="txtFone.Designer.cs">
-      <DependentUpon>txtFone.cs</DependentUpon>
-    </Compile>
     <Compile Include="txtNumeric.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -80,18 +57,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="cmbUF.resx">
-      <DependentUpon>cmbUF.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="txtCPF.resx">
-      <DependentUpon>txtCPF.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="txtCEP.resx">
-      <DependentUpon>txtCEP.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="txtFone.resx">
-      <DependentUpon>txtFone.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="txtNumeric.resx">
       <DependentUpon>txtNumeric.cs</DependentUpon>
     </EmbeddedResource>

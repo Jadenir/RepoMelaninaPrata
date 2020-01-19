@@ -3,6 +3,7 @@ using MelaninaPrata.Controllers;
 using MelaninaPrata.Models;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using Microsoft.VisualBasic;
 
 namespace MelaninaPrata.Views
 {
@@ -21,6 +22,59 @@ namespace MelaninaPrata.Views
         {
             //LImpa todos os campos
             btnClear_Click(sender, e);
+        }
+
+        //KeyPress
+        private void frmGrupos_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            try
+            {
+                int KeyAsc = Strings.Asc(e.KeyChar);
+                if (Strings.Asc(e.KeyChar) == 13)
+                {
+                    System.Windows.Forms.SendKeys.Send("{tab}");
+                    KeyAsc = 0;
+                }
+
+                if (KeyAsc == 0)
+                {
+                    e.Handled = true;
+                }
+
+                if (e.KeyChar == char.Parse("'"))
+                {
+                    e.Handled = true;
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        //Leave
+        private void txtCodigo_Leave(object sender, EventArgs e)
+        {
+            try
+            {
+                int codigo = Convert.ToInt32(txtCodigo.Text);
+                //Busca grupo por id
+                grupos objGrupo = GrupoController.BuscaGrupoPorID(codigo);
+                //Valida se encontrou algum registro
+                if (objGrupo == null)
+                {
+                    MessageBox.Show("Grupo não está cadastrado.");
+                    txtCodigo.Focus();
+                    return;
+                }
+                //Preenche campos
+                txtDescricao.Text = objGrupo.descricao;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         //Click
@@ -49,6 +103,8 @@ namespace MelaninaPrata.Views
             MessageBox.Show("Grupo gravado com sucesso.");
             //Limpa os campos
             btnClear_Click(sender, e);
+            //Coloca o foco na descrição
+            txtDescricao.Focus();
         }
         private void btnDelete_Click(object sender, EventArgs e)
         {

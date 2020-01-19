@@ -74,6 +74,7 @@ namespace MelaninaPrata
             this.PanelSubMenuConsignado.Name = "PanelSubMenuConsignado";
             this.PanelSubMenuConsignado.Size = new System.Drawing.Size(200, 80);
             this.PanelSubMenuConsignado.TabIndex = 4;
+            this.PanelSubMenuConsignado.Visible = false;
             // 
             // btnAcertar
             // 
@@ -131,6 +132,7 @@ namespace MelaninaPrata
             this.btnConsigacao.Text = "Consignado";
             this.btnConsigacao.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnConsigacao.UseVisualStyleBackColor = false;
+            this.btnConsigacao.Visible = false;
             this.btnConsigacao.Click += new System.EventHandler(this.btnConsigacao_Click);
             // 
             // PanelSubMenuCadastros
