@@ -199,7 +199,7 @@
             this.cmbGrupo.Size = new System.Drawing.Size(280, 21);
             this.cmbGrupo.TabIndex = 5;
             this.cmbGrupo.ValueMember = "id";
-            this.cmbGrupo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbGrupo_KeyPress);
+            this.cmbGrupo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             // 
             // dgvProdutos
             // 
