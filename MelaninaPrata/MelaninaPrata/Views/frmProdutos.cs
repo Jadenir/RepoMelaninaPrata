@@ -89,12 +89,6 @@ namespace MelaninaPrata.Views
             btnClear_Click(sender, e);
         }
         #endregion
-        #region "combobox"
-        private void cmbGrupo_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = true;
-        }
-        #endregion
         #region "formulário"
         private void frmProdutos_Load(object sender, EventArgs e)
         {
