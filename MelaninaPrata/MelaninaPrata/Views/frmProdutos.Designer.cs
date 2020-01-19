@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProdutos));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tollStipTopMenu = new System.Windows.Forms.ToolStrip();
             this.btnSave = new System.Windows.Forms.ToolStripButton();
             this.btnDelete = new System.Windows.Forms.ToolStripButton();
@@ -203,9 +203,6 @@
             // 
             // dgvProdutos
             // 
-            this.dgvProdutos.AllowUserToAddRows = false;
-            this.dgvProdutos.AllowUserToDeleteRows = false;
-            this.dgvProdutos.AllowUserToResizeRows = false;
             this.dgvProdutos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.dgvProdutos.BackgroundColor = System.Drawing.Color.White;
@@ -219,7 +216,6 @@
             this.colunaCusto});
             this.dgvProdutos.Location = new System.Drawing.Point(14, 155);
             this.dgvProdutos.Name = "dgvProdutos";
-            this.dgvProdutos.RowHeadersVisible = false;
             this.dgvProdutos.Size = new System.Drawing.Size(564, 355);
             this.dgvProdutos.TabIndex = 10;
             this.dgvProdutos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProdutos_CellDoubleClick);
@@ -251,16 +247,16 @@
             // 
             // colunaValor
             // 
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.colunaValor.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.colunaValor.DefaultCellStyle = dataGridViewCellStyle11;
             this.colunaValor.HeaderText = "Valor";
             this.colunaValor.Name = "colunaValor";
             this.colunaValor.ReadOnly = true;
             // 
             // colunaCusto
             // 
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.colunaCusto.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.colunaCusto.DefaultCellStyle = dataGridViewCellStyle12;
             this.colunaCusto.HeaderText = "Custo";
             this.colunaCusto.Name = "colunaCusto";
             this.colunaCusto.ReadOnly = true;
