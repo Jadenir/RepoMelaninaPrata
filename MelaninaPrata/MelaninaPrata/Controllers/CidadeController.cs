@@ -17,21 +17,19 @@ namespace MelaninaPrata.Controllers
             cidade objCidade = ContextoSingleton.Instancia.cidades.Find(id);
             return objCidade;
         }
+        //Lista por Codigo do IBGE
+        public static List<cidade> BuscaCidadePorCodIBGE(int CodIBGE)
+        {
+            //Consulta cidade por uf
+            List<cidade> objCidade = ContextoSingleton.Instancia.cidades.Where<cidade>(c => c.codigoIBGE == CodIBGE).ToList();
+            //return dados;
+            return objCidade;
+        }
         //Lista ComboBox por UF
         public static List<cidade> PopulaComboCidadePorUF(int uf)
         {
-            //DataTable dados = new DataTable();
-            //ComboBox objComboBox = new ComboBox();
+            //Consulta cidade por uf
             List<cidade> objCidade = ContextoSingleton.Instancia.cidades.Where<cidade>(c => c.uf == uf).ToList();
-
-            //dados.Columns.Add("COD");
-            //dados.Columns.Add("DESC");
-
-            //for (int i =0; i < objCidade.Count; i++)
-            //{
-            //    dados.Rows.Add(objCidade[i].id,
-            //                   objCidade[i].nome);
-            //}
             //return dados;
             return objCidade;
         }
