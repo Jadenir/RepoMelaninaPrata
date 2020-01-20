@@ -96,11 +96,30 @@ namespace MelaninaPrata.Views
                 MessageBox.Show("Informe a descrição do grupo.");
                 return;
             }
-            //Mota objeto de grupo para salvar
-            grupos grupo = pMontaObjGrupo();
-            //Salva grupo
-            GrupoController.SalvarGrupo(grupo);
-            MessageBox.Show("Grupo gravado com sucesso.");
+            //Passa o codigo para uma variavel
+            int codigo = int.Parse(txtCodigo.Text);
+            //Consulta grupo pelo id
+            grupos objGrupo = GrupoController.BuscaGrupoPorID(codigo);
+            //Se grupo não existir ele grava
+            if (objGrupo == null)
+            {
+                //Mota objeto de grupo para salvar
+                objGrupo = pMontaObjGrupo();
+                //grava novo grupo
+                //Salva grupo
+                GrupoController.SalvarGrupo(objGrupo);
+                //mostra mensagem para o usuario
+                MessageBox.Show("Grupo gravado com sucesso.");
+            }
+            else
+            {
+                //Mota objeto de grupo para salvar
+                objGrupo = pMontaObjGrupo();
+                //Altera grupo
+                GrupoController.AlterarGrupo(codigo, objGrupo);
+                //mostra mensagem para o usuario
+                MessageBox.Show("Grupo alterado com sucesso.");
+            }
             //Limpa os campos
             btnClear_Click(sender, e);
             //Coloca o foco na descrição
