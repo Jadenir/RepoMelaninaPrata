@@ -87,7 +87,7 @@ namespace MelaninaPrata.Views
                 txtNr.Text = objPessoa.numEndereco;
                 mskCep.Text = objPessoa.cep;
                 cmbUf.SelectedValue = objPessoa.uf;
-                cmbCidade.SelectedValue = CidadeController.BuscaCidadePorCodIBGE(int.Parse(objPessoa.codigoCidade));
+                cmbCidade.SelectedValue = int.Parse(objPessoa.codigoCidade.ToString());
                 mskTelefone.Text = objPessoa.telefone;
                 txtComissao.Text = objPessoa.comissao.ToString();
 
