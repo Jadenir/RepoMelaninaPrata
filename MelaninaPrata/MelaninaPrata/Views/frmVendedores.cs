@@ -84,6 +84,7 @@ namespace MelaninaPrata.Views
                 txtNome.Text = objPessoa.nome;
                 txtEndereco.Text = objPessoa.endereco;
                 txtComplemento.Text = objPessoa.complemento;
+                txtBairro.Text = objPessoa.bairro;
                 txtNr.Text = objPessoa.numEndereco;
                 mskCep.Text = objPessoa.cep;
                 cmbUf.SelectedValue = objPessoa.uf;
@@ -110,6 +111,7 @@ namespace MelaninaPrata.Views
             txtNome.Text = "";
             txtEndereco.Text = "";
             txtComplemento.Text = "";
+            txtBairro.Text = "";
             txtNr.Text = "";
             mskCep.Text = "";
             mskTelefone.Text = "";
@@ -149,13 +151,33 @@ namespace MelaninaPrata.Views
                 txtComissao.Focus();
                 return;
             }
-            //Mota objeto de grupo para salvar
-            pessoa objePessoa = pMontaObjPessoa();
-            //Salva grupo
-            PessoaController.SalvarPessoa(objePessoa);
-            MessageBox.Show("Vendedor(a) gravado(a) com sucesso.");
+            //passa o codigo para uma variavel
+            int codigo = int.Parse(txtCodigo.Text);
+            //Consulta grupo pelo id
+            pessoa objPessoa = PessoaController.BuscaPessoaPorID(codigo);
+            //Se grupo não existir ele grava
+            if (objPessoa == null)
+            {
+                //Mota objeto de grupo para salvar
+                objPessoa = pMontaObjPessoa();
+                //Salva grupo
+                PessoaController.SalvarPessoa(objPessoa);
+                //mostra mensagem para o usuario
+                MessageBox.Show("Vendedor(a) gravado(a) com sucesso.");
+            }
+            else
+            {
+                //Mota objeto de grupo para salvar
+                objPessoa = pMontaObjPessoa();
+                //Salva grupo
+                PessoaController.AlterarPessoa(codigo, objPessoa);
+                //mostra mensagem para o usuario
+                MessageBox.Show("Vendedor(a) alterado(a) com sucesso.");
+            }
             //Limpa os campos
             btnClear_Click(sender, e);
+            //Coloca o foco no cpf
+            mskCpf.Focus();
         }
         private void btnDelete_Click(object sender, EventArgs e)
         {
@@ -218,6 +240,7 @@ namespace MelaninaPrata.Views
             objPessoa.nome = txtNome.Text;
             objPessoa.endereco = txtEndereco.Text;
             objPessoa.complemento = txtComplemento.Text;
+            objPessoa.bairro = txtBairro.Text;
             objPessoa.numEndereco = txtNr.Text;
             objPessoa.cep = mskCep.Text.Replace(",", "").Replace("-", "");
             objPessoa.uf = int.Parse(cmbUf.SelectedValue.ToString());

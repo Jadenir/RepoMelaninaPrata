@@ -105,7 +105,6 @@ namespace MelaninaPrata.Views
             {
                 //Mota objeto de grupo para salvar
                 objGrupo = pMontaObjGrupo();
-                //grava novo grupo
                 //Salva grupo
                 GrupoController.SalvarGrupo(objGrupo);
                 //mostra mensagem para o usuario

@@ -64,6 +64,8 @@
             this.mskCep = new System.Windows.Forms.MaskedTextBox();
             this.mskTelefone = new System.Windows.Forms.MaskedTextBox();
             this.txtComissao = new UserControll.txtNumeric();
+            this.txtBairro = new System.Windows.Forms.TextBox();
+            this.lblBairro = new System.Windows.Forms.Label();
             this.tollStipTopMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVendedores)).BeginInit();
             this.SuspendLayout();
@@ -84,7 +86,7 @@
             this.tollStipTopMenu.Name = "tollStipTopMenu";
             this.tollStipTopMenu.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
             this.tollStipTopMenu.Size = new System.Drawing.Size(718, 47);
-            this.tollStipTopMenu.TabIndex = 25;
+            this.tollStipTopMenu.TabIndex = 27;
             this.tollStipTopMenu.TabStop = true;
             this.tollStipTopMenu.Text = "toolStrip1";
             // 
@@ -162,6 +164,7 @@
             // txtNome
             // 
             this.txtNome.Location = new System.Drawing.Point(71, 107);
+            this.txtNome.MaxLength = 100;
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(280, 20);
             this.txtNome.TabIndex = 7;
@@ -169,6 +172,7 @@
             // txtEndereco
             // 
             this.txtEndereco.Location = new System.Drawing.Point(71, 133);
+            this.txtEndereco.MaxLength = 50;
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.Size = new System.Drawing.Size(280, 20);
             this.txtEndereco.TabIndex = 9;
@@ -184,36 +188,37 @@
             // 
             // txtNr
             // 
-            this.txtNr.Location = new System.Drawing.Point(71, 185);
+            this.txtNr.Location = new System.Drawing.Point(71, 211);
+            this.txtNr.MaxLength = 10;
             this.txtNr.Name = "txtNr";
             this.txtNr.Size = new System.Drawing.Size(57, 20);
-            this.txtNr.TabIndex = 13;
+            this.txtNr.TabIndex = 15;
             // 
             // lblNr
             // 
             this.lblNr.AutoSize = true;
-            this.lblNr.Location = new System.Drawing.Point(12, 189);
+            this.lblNr.Location = new System.Drawing.Point(12, 215);
             this.lblNr.Name = "lblNr";
             this.lblNr.Size = new System.Drawing.Size(19, 13);
-            this.lblNr.TabIndex = 12;
+            this.lblNr.TabIndex = 14;
             this.lblNr.Text = "N°";
             // 
             // lblTelefone
             // 
             this.lblTelefone.AutoSize = true;
-            this.lblTelefone.Location = new System.Drawing.Point(12, 241);
+            this.lblTelefone.Location = new System.Drawing.Point(12, 267);
             this.lblTelefone.Name = "lblTelefone";
             this.lblTelefone.Size = new System.Drawing.Size(49, 13);
-            this.lblTelefone.TabIndex = 20;
+            this.lblTelefone.TabIndex = 22;
             this.lblTelefone.Text = "Telefone";
             // 
             // lblComissao
             // 
             this.lblComissao.AutoSize = true;
-            this.lblComissao.Location = new System.Drawing.Point(12, 267);
+            this.lblComissao.Location = new System.Drawing.Point(12, 293);
             this.lblComissao.Name = "lblComissao";
             this.lblComissao.Size = new System.Drawing.Size(52, 13);
-            this.lblComissao.TabIndex = 22;
+            this.lblComissao.TabIndex = 24;
             this.lblComissao.Text = "Comissão";
             // 
             // dgvVendedores
@@ -227,11 +232,11 @@
             this.ColunaCpf,
             this.ColunaNome,
             this.ColunaTelefone});
-            this.dgvVendedores.Location = new System.Drawing.Point(15, 290);
+            this.dgvVendedores.Location = new System.Drawing.Point(15, 332);
             this.dgvVendedores.Name = "dgvVendedores";
             this.dgvVendedores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvVendedores.Size = new System.Drawing.Size(515, 220);
-            this.dgvVendedores.TabIndex = 24;
+            this.dgvVendedores.Size = new System.Drawing.Size(515, 178);
+            this.dgvVendedores.TabIndex = 26;
             this.dgvVendedores.TabStop = false;
             this.dgvVendedores.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVendedores_CellDoubleClick);
             // 
@@ -281,6 +286,7 @@
             // txtComplemento
             // 
             this.txtComplemento.Location = new System.Drawing.Point(71, 159);
+            this.txtComplemento.MaxLength = 50;
             this.txtComplemento.Name = "txtComplemento";
             this.txtComplemento.Size = new System.Drawing.Size(280, 20);
             this.txtComplemento.TabIndex = 11;
@@ -297,28 +303,28 @@
             // lblCEP
             // 
             this.lblCEP.AutoSize = true;
-            this.lblCEP.Location = new System.Drawing.Point(144, 189);
+            this.lblCEP.Location = new System.Drawing.Point(144, 215);
             this.lblCEP.Name = "lblCEP";
             this.lblCEP.Size = new System.Drawing.Size(28, 13);
-            this.lblCEP.TabIndex = 14;
+            this.lblCEP.TabIndex = 16;
             this.lblCEP.Text = "CEP";
             // 
             // lblUF
             // 
             this.lblUF.AutoSize = true;
-            this.lblUF.Location = new System.Drawing.Point(259, 189);
+            this.lblUF.Location = new System.Drawing.Point(259, 215);
             this.lblUF.Name = "lblUF";
             this.lblUF.Size = new System.Drawing.Size(21, 13);
-            this.lblUF.TabIndex = 16;
+            this.lblUF.TabIndex = 18;
             this.lblUF.Text = "UF";
             // 
             // lblCidade
             // 
             this.lblCidade.AutoSize = true;
-            this.lblCidade.Location = new System.Drawing.Point(12, 214);
+            this.lblCidade.Location = new System.Drawing.Point(12, 240);
             this.lblCidade.Name = "lblCidade";
             this.lblCidade.Size = new System.Drawing.Size(40, 13);
-            this.lblCidade.TabIndex = 18;
+            this.lblCidade.TabIndex = 20;
             this.lblCidade.Text = "Cidade";
             // 
             // cmbCidade
@@ -326,10 +332,10 @@
             this.cmbCidade.DisplayMember = "nome";
             this.cmbCidade.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCidade.FormattingEnabled = true;
-            this.cmbCidade.Location = new System.Drawing.Point(71, 211);
+            this.cmbCidade.Location = new System.Drawing.Point(71, 237);
             this.cmbCidade.Name = "cmbCidade";
             this.cmbCidade.Size = new System.Drawing.Size(280, 21);
-            this.cmbCidade.TabIndex = 19;
+            this.cmbCidade.TabIndex = 21;
             this.cmbCidade.ValueMember = "codigoIBGE";
             // 
             // txtCodigo
@@ -354,10 +360,10 @@
             this.cmbUf.DisplayMember = "uf";
             this.cmbUf.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbUf.FormattingEnabled = true;
-            this.cmbUf.Location = new System.Drawing.Point(286, 185);
+            this.cmbUf.Location = new System.Drawing.Point(286, 211);
             this.cmbUf.Name = "cmbUf";
             this.cmbUf.Size = new System.Drawing.Size(65, 21);
-            this.cmbUf.TabIndex = 17;
+            this.cmbUf.TabIndex = 19;
             this.cmbUf.ValueMember = "codigoUf";
             this.cmbUf.SelectedIndexChanged += new System.EventHandler(this.cmbUf_SelectedIndexChanged);
             // 
@@ -371,26 +377,43 @@
             // 
             // mskCep
             // 
-            this.mskCep.Location = new System.Drawing.Point(174, 185);
+            this.mskCep.Location = new System.Drawing.Point(174, 211);
             this.mskCep.Mask = "00.000-000";
             this.mskCep.Name = "mskCep";
             this.mskCep.Size = new System.Drawing.Size(79, 20);
-            this.mskCep.TabIndex = 15;
+            this.mskCep.TabIndex = 17;
             // 
             // mskTelefone
             // 
-            this.mskTelefone.Location = new System.Drawing.Point(71, 238);
+            this.mskTelefone.Location = new System.Drawing.Point(71, 264);
             this.mskTelefone.Mask = "(00) 00000-0000";
             this.mskTelefone.Name = "mskTelefone";
             this.mskTelefone.Size = new System.Drawing.Size(94, 20);
-            this.mskTelefone.TabIndex = 21;
+            this.mskTelefone.TabIndex = 23;
             // 
             // txtComissao
             // 
-            this.txtComissao.Location = new System.Drawing.Point(71, 264);
+            this.txtComissao.Location = new System.Drawing.Point(71, 290);
             this.txtComissao.Name = "txtComissao";
             this.txtComissao.Size = new System.Drawing.Size(94, 20);
-            this.txtComissao.TabIndex = 23;
+            this.txtComissao.TabIndex = 25;
+            // 
+            // txtBairro
+            // 
+            this.txtBairro.Location = new System.Drawing.Point(71, 185);
+            this.txtBairro.MaxLength = 100;
+            this.txtBairro.Name = "txtBairro";
+            this.txtBairro.Size = new System.Drawing.Size(280, 20);
+            this.txtBairro.TabIndex = 13;
+            // 
+            // lblBairro
+            // 
+            this.lblBairro.AutoSize = true;
+            this.lblBairro.Location = new System.Drawing.Point(12, 188);
+            this.lblBairro.Name = "lblBairro";
+            this.lblBairro.Size = new System.Drawing.Size(34, 13);
+            this.lblBairro.TabIndex = 12;
+            this.lblBairro.Text = "Bairro";
             // 
             // frmPessoas
             // 
@@ -398,6 +421,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(718, 522);
+            this.Controls.Add(this.txtBairro);
+            this.Controls.Add(this.lblBairro);
             this.Controls.Add(this.mskTelefone);
             this.Controls.Add(this.mskCep);
             this.Controls.Add(this.mskCpf);
@@ -475,5 +500,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColunaCpf;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColunaNome;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColunaTelefone;
+        private System.Windows.Forms.TextBox txtBairro;
+        private System.Windows.Forms.Label lblBairro;
     }
 }

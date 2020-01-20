@@ -47,6 +47,7 @@
           <Property Name="codigoCidade" Type="varchar" MaxLength="20" />
           <Property Name="uf" Type="int" />
           <Property Name="telefone" Type="varchar" MaxLength="50" />
+          <Property Name="bairro" Type="varchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="produtos">
           <Key>
@@ -119,6 +120,7 @@
           <Property Name="codigoCidade" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="uf" Type="Int32" />
           <Property Name="telefone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="bairro" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="produto">
           <Key>
@@ -192,6 +194,7 @@
           <EntitySetMapping Name="pessoas">
             <EntityTypeMapping TypeName="DBMelaninaModel.pessoa">
               <MappingFragment StoreEntitySet="pessoas">
+                <ScalarProperty Name="bairro" ColumnName="bairro" />
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="nome" ColumnName="nome" />
                 <ScalarProperty Name="cpf" ColumnName="cpf" />

@@ -26,5 +26,6 @@ namespace MelaninaPrata.Models
         public string codigoCidade { get; set; }
         public Nullable<int> uf { get; set; }
         public string telefone { get; set; }
+        public string bairro { get; set; }
     }
 }

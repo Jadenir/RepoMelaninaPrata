@@ -25,6 +25,7 @@ namespace MelaninaPrata.Controllers
                 objPessoa.nome = novaPessoa.nome;
                 objPessoa.endereco = novaPessoa.endereco;
                 objPessoa.complemento = novaPessoa.complemento;
+                objPessoa.bairro = novaPessoa.bairro;
                 objPessoa.numEndereco = novaPessoa.numEndereco;
                 objPessoa.cep = novaPessoa.cep;
                 objPessoa.uf = novaPessoa.uf;
