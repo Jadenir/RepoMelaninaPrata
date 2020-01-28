@@ -90,16 +90,23 @@ namespace MelaninaPrata.Views
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
+            grupos objGrupo = null;
+            //Passa o codigo para uma variavel
+            int codigo = 0;
             //Valida se foi informada descrição
             if (txtDescricao.Text == string.Empty)
             {
                 MessageBox.Show("Informe a descrição do grupo.");
                 return;
             }
-            //Passa o codigo para uma variavel
-            int codigo = int.Parse(txtCodigo.Text);
-            //Consulta grupo pelo id
-            grupos objGrupo = GrupoController.BuscaGrupoPorID(codigo);
+            //Valida se esta editando
+            if (txtCodigo.Text != string.Empty)
+            {
+                //passa valor para variavel
+                codigo = int.Parse(txtCodigo.Text);
+                //Consulta grupo pelo id
+                objGrupo = GrupoController.BuscaGrupoPorID(codigo);
+            }
             //Se grupo não existir ele grava
             if (objGrupo == null)
             {
@@ -126,15 +133,14 @@ namespace MelaninaPrata.Views
         }
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            int codigo = Convert.ToInt32(txtCodigo.Text);
-            string descricao = txtDescricao.Text;
-
             //Valida se foi informado um codigo
             if (txtCodigo.Text == string.Empty)
             {
                 MessageBox.Show("Selecione um grupo.");
                 return;
             }
+            int codigo = Convert.ToInt32(txtCodigo.Text);
+            string descricao = txtDescricao.Text;
             //Consulta grupo por ID
             grupos objGrupos = GrupoController.BuscaGrupoPorID(codigo);
             //Valida se grupo existe

@@ -32,6 +32,9 @@ namespace MelaninaPrata.Controllers
                 objPessoa.codigoCidade = novaPessoa.codigoCidade;
                 objPessoa.telefone = novaPessoa.telefone;
                 objPessoa.comissao = novaPessoa.comissao;
+                objPessoa.nomeReferencia = novaPessoa.nomeReferencia;
+                objPessoa.telefoneReferencia = novaPessoa.telefoneReferencia;
+                objPessoa.observacao = novaPessoa.observacao;
             }
 
             ContextoSingleton.Instancia.Entry(objPessoa).State = EntityState.Modified;

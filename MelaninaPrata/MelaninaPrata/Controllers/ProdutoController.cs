@@ -8,30 +8,33 @@ namespace MelaninaPrata.Controllers
 {
     public class ProdutoController
     {
-        //Salva o grupo
+        //Salva o produto
         public static void SalvarProduto(produto produto)
         {
             ContextoSingleton.Instancia.produtos.Add(produto);
             ContextoSingleton.Instancia.SaveChanges();
         }
-        //Altera o grupo
+        //Altera o produto
         public static void AlterarProduto(int id, produto novoProduto)
         {
-            produto produto = ContextoSingleton.Instancia.produtos.Find(id);
+            produto objProduto = ContextoSingleton.Instancia.produtos.Find(id);
 
-            if (produto != null)
-            {
-                novoProduto.id = produto.id;
-                produto = novoProduto;
+            if (objProduto != null)
+            {                
+                objProduto.referencia = novoProduto.referencia;
+                objProduto.descricao = novoProduto.descricao;
+                objProduto.grupoId = novoProduto.grupoId;
+                objProduto.valor = novoProduto.valor;
+                objProduto.custo = novoProduto.custo;
             }
 
-            ContextoSingleton.Instancia.Entry(produto).State = EntityState.Modified;
+            ContextoSingleton.Instancia.Entry(objProduto).State = EntityState.Modified;
             ContextoSingleton.Instancia.SaveChanges();
         }
-        //Exclui o grupo
+        //Exclui o produto
         public static void ExcluirProduto(int id)
         {
-            //Consulta e retorna grupo
+            //Consulta e retorna produto
             produto produto = ContextoSingleton.Instancia.produtos.Find(id);
             //Deleta registro da tabela
             ContextoSingleton.Instancia.Entry(produto).State = EntityState.Deleted;
@@ -44,7 +47,7 @@ namespace MelaninaPrata.Controllers
             produto produto = ContextoSingleton.Instancia.produtos.Find(id);
             return produto;
         }
-        //Lista todos os grupos
+        //Lista todos os produto
         public static List<produto> ListarTodosProdutos()
         {
             return ContextoSingleton.Instancia.produtos.ToList();

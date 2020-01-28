@@ -66,6 +66,11 @@
             this.txtComissao = new UserControll.txtNumeric();
             this.txtBairro = new System.Windows.Forms.TextBox();
             this.lblBairro = new System.Windows.Forms.Label();
+            this.rtbObservacao = new System.Windows.Forms.RichTextBox();
+            this.mskTelefoneReferencia = new System.Windows.Forms.MaskedTextBox();
+            this.lblTelefoneReferencia = new System.Windows.Forms.Label();
+            this.txtReferencia = new System.Windows.Forms.TextBox();
+            this.lblReferencia = new System.Windows.Forms.Label();
             this.tollStipTopMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVendedores)).BeginInit();
             this.SuspendLayout();
@@ -215,11 +220,11 @@
             // lblComissao
             // 
             this.lblComissao.AutoSize = true;
-            this.lblComissao.Location = new System.Drawing.Point(12, 293);
+            this.lblComissao.Location = new System.Drawing.Point(190, 267);
             this.lblComissao.Name = "lblComissao";
-            this.lblComissao.Size = new System.Drawing.Size(52, 13);
+            this.lblComissao.Size = new System.Drawing.Size(63, 13);
             this.lblComissao.TabIndex = 24;
-            this.lblComissao.Text = "Comissão";
+            this.lblComissao.Text = "Comissão %";
             // 
             // dgvVendedores
             // 
@@ -232,10 +237,10 @@
             this.ColunaCpf,
             this.ColunaNome,
             this.ColunaTelefone});
-            this.dgvVendedores.Location = new System.Drawing.Point(15, 332);
+            this.dgvVendedores.Location = new System.Drawing.Point(15, 290);
             this.dgvVendedores.Name = "dgvVendedores";
             this.dgvVendedores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvVendedores.Size = new System.Drawing.Size(515, 178);
+            this.dgvVendedores.Size = new System.Drawing.Size(691, 220);
             this.dgvVendedores.TabIndex = 26;
             this.dgvVendedores.TabStop = false;
             this.dgvVendedores.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVendedores_CellDoubleClick);
@@ -393,7 +398,7 @@
             // 
             // txtComissao
             // 
-            this.txtComissao.Location = new System.Drawing.Point(71, 290);
+            this.txtComissao.Location = new System.Drawing.Point(257, 264);
             this.txtComissao.Name = "txtComissao";
             this.txtComissao.Size = new System.Drawing.Size(94, 20);
             this.txtComissao.TabIndex = 25;
@@ -415,12 +420,61 @@
             this.lblBairro.TabIndex = 12;
             this.lblBairro.Text = "Bairro";
             // 
+            // rtbObservacao
+            // 
+            this.rtbObservacao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.rtbObservacao.Location = new System.Drawing.Point(370, 107);
+            this.rtbObservacao.MaxLength = 1000;
+            this.rtbObservacao.Name = "rtbObservacao";
+            this.rtbObservacao.Size = new System.Drawing.Size(336, 177);
+            this.rtbObservacao.TabIndex = 36;
+            this.rtbObservacao.Text = "";
+            // 
+            // mskTelefoneReferencia
+            // 
+            this.mskTelefoneReferencia.Location = new System.Drawing.Point(432, 82);
+            this.mskTelefoneReferencia.Mask = "(00) 00000-0000";
+            this.mskTelefoneReferencia.Name = "mskTelefoneReferencia";
+            this.mskTelefoneReferencia.Size = new System.Drawing.Size(94, 20);
+            this.mskTelefoneReferencia.TabIndex = 34;
+            // 
+            // lblTelefoneReferencia
+            // 
+            this.lblTelefoneReferencia.AutoSize = true;
+            this.lblTelefoneReferencia.Location = new System.Drawing.Point(367, 85);
+            this.lblTelefoneReferencia.Name = "lblTelefoneReferencia";
+            this.lblTelefoneReferencia.Size = new System.Drawing.Size(49, 13);
+            this.lblTelefoneReferencia.TabIndex = 32;
+            this.lblTelefoneReferencia.Text = "Telefone";
+            // 
+            // txtReferencia
+            // 
+            this.txtReferencia.Location = new System.Drawing.Point(432, 55);
+            this.txtReferencia.MaxLength = 100;
+            this.txtReferencia.Name = "txtReferencia";
+            this.txtReferencia.Size = new System.Drawing.Size(274, 20);
+            this.txtReferencia.TabIndex = 35;
+            // 
+            // lblReferencia
+            // 
+            this.lblReferencia.AutoSize = true;
+            this.lblReferencia.Location = new System.Drawing.Point(367, 58);
+            this.lblReferencia.Name = "lblReferencia";
+            this.lblReferencia.Size = new System.Drawing.Size(59, 13);
+            this.lblReferencia.TabIndex = 33;
+            this.lblReferencia.Text = "Referência";
+            // 
             // frmPessoas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(718, 522);
+            this.Controls.Add(this.rtbObservacao);
+            this.Controls.Add(this.mskTelefoneReferencia);
+            this.Controls.Add(this.lblTelefoneReferencia);
+            this.Controls.Add(this.txtReferencia);
+            this.Controls.Add(this.lblReferencia);
             this.Controls.Add(this.txtBairro);
             this.Controls.Add(this.lblBairro);
             this.Controls.Add(this.mskTelefone);
@@ -502,5 +556,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColunaTelefone;
         private System.Windows.Forms.TextBox txtBairro;
         private System.Windows.Forms.Label lblBairro;
+        private System.Windows.Forms.RichTextBox rtbObservacao;
+        private System.Windows.Forms.MaskedTextBox mskTelefoneReferencia;
+        private System.Windows.Forms.Label lblTelefoneReferencia;
+        private System.Windows.Forms.TextBox txtReferencia;
+        private System.Windows.Forms.Label lblReferencia;
     }
 }

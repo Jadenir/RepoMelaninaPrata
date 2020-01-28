@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProdutos));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tollStipTopMenu = new System.Windows.Forms.ToolStrip();
             this.btnSave = new System.Windows.Forms.ToolStripButton();
             this.btnDelete = new System.Windows.Forms.ToolStripButton();
@@ -47,6 +47,7 @@
             this.cmbGrupo = new System.Windows.Forms.ComboBox();
             this.dgvProdutos = new System.Windows.Forms.DataGridView();
             this.colunaId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColunaReferencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colunaDescricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colunaCodGrupo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colunaDescGrupo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,6 +55,8 @@
             this.colunaCusto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtValor = new UserControll.txtNumeric();
             this.txtCusto = new UserControll.txtNumeric();
+            this.txtReferencia = new System.Windows.Forms.TextBox();
+            this.lblRefrencia = new System.Windows.Forms.Label();
             this.tollStipTopMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).BeginInit();
             this.SuspendLayout();
@@ -74,7 +77,7 @@
             this.tollStipTopMenu.Name = "tollStipTopMenu";
             this.tollStipTopMenu.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
             this.tollStipTopMenu.Size = new System.Drawing.Size(718, 47);
-            this.tollStipTopMenu.TabIndex = 11;
+            this.tollStipTopMenu.TabIndex = 13;
             this.tollStipTopMenu.TabStop = true;
             this.tollStipTopMenu.Text = "toolStrip1";
             // 
@@ -97,7 +100,7 @@
             this.btnDelete.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(46, 44);
+            this.btnDelete.Size = new System.Drawing.Size(45, 44);
             this.btnDelete.Text = "Excluir";
             this.btnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -152,7 +155,7 @@
             this.txtDescricao.Location = new System.Drawing.Point(70, 76);
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(280, 20);
-            this.txtDescricao.TabIndex = 3;
+            this.txtDescricao.TabIndex = 5;
             // 
             // lblDescricao
             // 
@@ -160,7 +163,7 @@
             this.lblDescricao.Location = new System.Drawing.Point(11, 79);
             this.lblDescricao.Name = "lblDescricao";
             this.lblDescricao.Size = new System.Drawing.Size(55, 13);
-            this.lblDescricao.TabIndex = 2;
+            this.lblDescricao.TabIndex = 4;
             this.lblDescricao.Text = "Descrição";
             // 
             // lblValor
@@ -169,7 +172,7 @@
             this.lblValor.Location = new System.Drawing.Point(11, 132);
             this.lblValor.Name = "lblValor";
             this.lblValor.Size = new System.Drawing.Size(48, 13);
-            this.lblValor.TabIndex = 6;
+            this.lblValor.TabIndex = 8;
             this.lblValor.Text = "Valor R$";
             // 
             // lblCusto
@@ -178,7 +181,7 @@
             this.lblCusto.Location = new System.Drawing.Point(189, 132);
             this.lblCusto.Name = "lblCusto";
             this.lblCusto.Size = new System.Drawing.Size(51, 13);
-            this.lblCusto.TabIndex = 8;
+            this.lblCusto.TabIndex = 10;
             this.lblCusto.Text = "Custo R$";
             // 
             // lblGrupo
@@ -187,19 +190,19 @@
             this.lblGrupo.Location = new System.Drawing.Point(11, 105);
             this.lblGrupo.Name = "lblGrupo";
             this.lblGrupo.Size = new System.Drawing.Size(36, 13);
-            this.lblGrupo.TabIndex = 4;
+            this.lblGrupo.TabIndex = 6;
             this.lblGrupo.Text = "Grupo";
             // 
             // cmbGrupo
             // 
             this.cmbGrupo.DisplayMember = "descricao";
+            this.cmbGrupo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbGrupo.FormattingEnabled = true;
             this.cmbGrupo.Location = new System.Drawing.Point(70, 102);
             this.cmbGrupo.Name = "cmbGrupo";
             this.cmbGrupo.Size = new System.Drawing.Size(280, 21);
-            this.cmbGrupo.TabIndex = 5;
+            this.cmbGrupo.TabIndex = 7;
             this.cmbGrupo.ValueMember = "id";
-            this.cmbGrupo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             // 
             // dgvProdutos
             // 
@@ -209,6 +212,7 @@
             this.dgvProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProdutos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colunaId,
+            this.ColunaReferencia,
             this.colunaDescricao,
             this.colunaCodGrupo,
             this.colunaDescGrupo,
@@ -216,8 +220,8 @@
             this.colunaCusto});
             this.dgvProdutos.Location = new System.Drawing.Point(14, 155);
             this.dgvProdutos.Name = "dgvProdutos";
-            this.dgvProdutos.Size = new System.Drawing.Size(564, 355);
-            this.dgvProdutos.TabIndex = 10;
+            this.dgvProdutos.Size = new System.Drawing.Size(615, 355);
+            this.dgvProdutos.TabIndex = 12;
             this.dgvProdutos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProdutos_CellDoubleClick);
             // 
             // colunaId
@@ -225,6 +229,13 @@
             this.colunaId.HeaderText = "Id";
             this.colunaId.Name = "colunaId";
             this.colunaId.ReadOnly = true;
+            this.colunaId.Width = 50;
+            // 
+            // ColunaReferencia
+            // 
+            this.ColunaReferencia.HeaderText = "Referência";
+            this.ColunaReferencia.Name = "ColunaReferencia";
+            this.ColunaReferencia.ReadOnly = true;
             // 
             // colunaDescricao
             // 
@@ -247,16 +258,16 @@
             // 
             // colunaValor
             // 
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.colunaValor.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.colunaValor.DefaultCellStyle = dataGridViewCellStyle1;
             this.colunaValor.HeaderText = "Valor";
             this.colunaValor.Name = "colunaValor";
             this.colunaValor.ReadOnly = true;
             // 
             // colunaCusto
             // 
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.colunaCusto.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.colunaCusto.DefaultCellStyle = dataGridViewCellStyle2;
             this.colunaCusto.HeaderText = "Custo";
             this.colunaCusto.Name = "colunaCusto";
             this.colunaCusto.ReadOnly = true;
@@ -266,14 +277,30 @@
             this.txtValor.Location = new System.Drawing.Point(70, 129);
             this.txtValor.Name = "txtValor";
             this.txtValor.Size = new System.Drawing.Size(107, 20);
-            this.txtValor.TabIndex = 7;
+            this.txtValor.TabIndex = 9;
             // 
             // txtCusto
             // 
             this.txtCusto.Location = new System.Drawing.Point(243, 129);
             this.txtCusto.Name = "txtCusto";
             this.txtCusto.Size = new System.Drawing.Size(107, 20);
-            this.txtCusto.TabIndex = 9;
+            this.txtCusto.TabIndex = 11;
+            // 
+            // txtReferencia
+            // 
+            this.txtReferencia.Location = new System.Drawing.Point(248, 50);
+            this.txtReferencia.Name = "txtReferencia";
+            this.txtReferencia.Size = new System.Drawing.Size(102, 20);
+            this.txtReferencia.TabIndex = 3;
+            // 
+            // lblRefrencia
+            // 
+            this.lblRefrencia.AutoSize = true;
+            this.lblRefrencia.Location = new System.Drawing.Point(183, 53);
+            this.lblRefrencia.Name = "lblRefrencia";
+            this.lblRefrencia.Size = new System.Drawing.Size(59, 13);
+            this.lblRefrencia.TabIndex = 2;
+            this.lblRefrencia.Text = "Referência";
             // 
             // frmProdutos
             // 
@@ -281,6 +308,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(718, 522);
+            this.Controls.Add(this.txtReferencia);
+            this.Controls.Add(this.lblRefrencia);
             this.Controls.Add(this.txtCusto);
             this.Controls.Add(this.txtValor);
             this.Controls.Add(this.dgvProdutos);
@@ -322,13 +351,16 @@
         private System.Windows.Forms.Label lblGrupo;
         private System.Windows.Forms.ComboBox cmbGrupo;
         private System.Windows.Forms.DataGridView dgvProdutos;
+        private UserControll.txtNumeric txtValor;
+        private UserControll.txtNumeric txtCusto;
+        private System.Windows.Forms.TextBox txtReferencia;
+        private System.Windows.Forms.Label lblRefrencia;
         private System.Windows.Forms.DataGridViewTextBoxColumn colunaId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColunaReferencia;
         private System.Windows.Forms.DataGridViewTextBoxColumn colunaDescricao;
         private System.Windows.Forms.DataGridViewTextBoxColumn colunaCodGrupo;
         private System.Windows.Forms.DataGridViewTextBoxColumn colunaDescGrupo;
         private System.Windows.Forms.DataGridViewTextBoxColumn colunaValor;
         private System.Windows.Forms.DataGridViewTextBoxColumn colunaCusto;
-        private UserControll.txtNumeric txtValor;
-        private UserControll.txtNumeric txtCusto;
     }
 }

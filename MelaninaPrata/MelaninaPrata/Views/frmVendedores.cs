@@ -91,7 +91,9 @@ namespace MelaninaPrata.Views
                 cmbCidade.SelectedValue = int.Parse(objPessoa.codigoCidade.ToString());
                 mskTelefone.Text = objPessoa.telefone;
                 txtComissao.Text = objPessoa.comissao.ToString();
-
+                txtReferencia.Text = objPessoa.nomeReferencia.ToString();
+                mskTelefoneReferencia.Text = objPessoa.telefoneReferencia;
+                rtbObservacao.Text = objPessoa.observacao;
             }
             catch (Exception ex)
             {
@@ -116,6 +118,9 @@ namespace MelaninaPrata.Views
             mskCep.Text = "";
             mskTelefone.Text = "";
             txtComissao.Text = "0,00";
+            txtReferencia.Text = "";
+            mskTelefoneReferencia.Text = "";
+            rtbObservacao.Text = "";
             //Popula comboBox de estados
             cmbUf.DataSource = UfController.ListarTodasUFs();
             //Popula grid com vendedores já cadastrados
@@ -123,6 +128,8 @@ namespace MelaninaPrata.Views
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
+            pessoa objPessoa = null;
+            int codigo = 0;
             //Valida se foi informado cpf
             if (mskCpf.Text == string.Empty || mskCpf.Text == "   ,   ,   -")
             {
@@ -151,10 +158,27 @@ namespace MelaninaPrata.Views
                 txtComissao.Focus();
                 return;
             }
-            //passa o codigo para uma variavel
-            int codigo = int.Parse(txtCodigo.Text);
-            //Consulta grupo pelo id
-            pessoa objPessoa = PessoaController.BuscaPessoaPorID(codigo);
+            //Valida se foi informada a referencia
+            if (txtReferencia.Text == string.Empty)
+            {
+                MessageBox.Show("Informe a referência do(a) vendedor(a).");
+                txtReferencia.Focus();
+                return;
+            }
+            //Valida se foi informada o telefone da referencia
+            if (mskTelefoneReferencia.Text == string.Empty || mskTelefoneReferencia.Text == "(  )      -")
+            {
+                MessageBox.Show("Informe o telefone da referência do(a) vendedor(a).");
+                mskTelefoneReferencia.Focus();
+                return;
+            }
+            if (txtCodigo.Text != string.Empty)
+            {
+                //passa o codigo para uma variavel
+                codigo = int.Parse(txtCodigo.Text);
+                //Consulta grupo pelo id
+                objPessoa = PessoaController.BuscaPessoaPorID(codigo);
+            }
             //Se grupo não existir ele grava
             if (objPessoa == null)
             {
@@ -181,8 +205,6 @@ namespace MelaninaPrata.Views
         }
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            int codigo = Convert.ToInt32(txtCodigo.Text);
-
             //Valida se foi informado um codigo
             if (txtCodigo.Text == string.Empty)
             {
@@ -190,6 +212,7 @@ namespace MelaninaPrata.Views
                 txtCodigo.Focus();
                 return;
             }
+            int codigo = Convert.ToInt32(txtCodigo.Text);
             //Consulta grupo por ID
             pessoa objPessoa = PessoaController.BuscaPessoaPorID(codigo);
             //Valida se vendedor existe
@@ -247,6 +270,9 @@ namespace MelaninaPrata.Views
             objPessoa.codigoCidade = cmbCidade.SelectedValue.ToString();
             objPessoa.telefone = mskTelefone.Text.Replace("(", "").Replace(")", "").Replace("-", "").Replace(" ", "");
             objPessoa.comissao = decimal.Parse(txtComissao.Text);
+            objPessoa.nomeReferencia = txtReferencia.Text;
+            objPessoa.telefoneReferencia = mskTelefoneReferencia.Text.Replace("(", "").Replace(")", "").Replace("-", "").Replace(" ", "");
+            objPessoa.observacao = rtbObservacao.Text;
             return objPessoa;
         }
         private void pPopulaVendedores()

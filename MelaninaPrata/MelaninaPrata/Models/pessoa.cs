@@ -27,5 +27,8 @@ namespace MelaninaPrata.Models
         public Nullable<int> uf { get; set; }
         public string telefone { get; set; }
         public string bairro { get; set; }
+        public string nomeReferencia { get; set; }
+        public string telefoneReferencia { get; set; }
+        public string observacao { get; set; }
     }
 }

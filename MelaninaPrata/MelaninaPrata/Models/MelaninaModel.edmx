@@ -48,6 +48,9 @@
           <Property Name="uf" Type="int" />
           <Property Name="telefone" Type="varchar" MaxLength="50" />
           <Property Name="bairro" Type="varchar" MaxLength="100" />
+          <Property Name="nomeReferencia" Type="varchar" MaxLength="100" />
+          <Property Name="telefoneReferencia" Type="varchar" MaxLength="50" />
+          <Property Name="observacao" Type="varchar" MaxLength="1000" />
         </EntityType>
         <EntityType Name="produtos">
           <Key>
@@ -121,6 +124,9 @@
           <Property Name="uf" Type="Int32" />
           <Property Name="telefone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="bairro" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="nomeReferencia" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="telefoneReferencia" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="observacao" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="produto">
           <Key>
@@ -194,6 +200,9 @@
           <EntitySetMapping Name="pessoas">
             <EntityTypeMapping TypeName="DBMelaninaModel.pessoa">
               <MappingFragment StoreEntitySet="pessoas">
+                <ScalarProperty Name="observacao" ColumnName="observacao" />
+                <ScalarProperty Name="telefoneReferencia" ColumnName="telefoneReferencia" />
+                <ScalarProperty Name="nomeReferencia" ColumnName="nomeReferencia" />
                 <ScalarProperty Name="bairro" ColumnName="bairro" />
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="nome" ColumnName="nome" />

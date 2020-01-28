@@ -138,6 +138,12 @@
     <Compile Include="Views\frmGrupos.Designer.cs">
       <DependentUpon>frmGrupos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\frmListaConsignado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmListaConsignado.Designer.cs">
+      <DependentUpon>frmListaConsignado.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\frmProdutos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,6 +171,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\frmGrupos.resx">
       <DependentUpon>frmGrupos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmListaConsignado.resx">
+      <DependentUpon>frmListaConsignado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\frmProdutos.resx">
       <DependentUpon>frmProdutos.cs</DependentUpon>
