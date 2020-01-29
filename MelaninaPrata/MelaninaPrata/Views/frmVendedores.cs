@@ -108,6 +108,7 @@ namespace MelaninaPrata.Views
         }
         private void btnClear_Click(object sender, EventArgs e)
         {
+            txtCodigo.Text = "";
             mskCpf.Text = "";
             dtpNascimento.Value = DateTime.Now.Date;
             txtNome.Text = "";

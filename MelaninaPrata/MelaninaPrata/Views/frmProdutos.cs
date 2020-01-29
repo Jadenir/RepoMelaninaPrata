@@ -149,7 +149,6 @@ namespace MelaninaPrata.Views
         private produto pMontaObjProduto()
         {
             produto objProduto = new produto();
-            objProduto.id = int.Parse(txtCodigo.Text);
             objProduto.referencia = txtReferencia.Text;
             objProduto.descricao = txtDescricao.Text;
             objProduto.grupoId = int.Parse(cmbGrupo.SelectedValue.ToString());
