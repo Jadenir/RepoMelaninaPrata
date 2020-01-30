@@ -1371,6 +1371,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_8283A661EDE34F5997F4D8CC13AF0B8E"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_82E4D982F3EACB9773D0E36D4100C054"
         "OwnerKey" = "8:_EB6868E562B1E287E378EB8CD3C6F9DA"
         "MsmSig" = "8:_UNDEFINED"
@@ -8123,6 +8129,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8283A661EDE34F5997F4D8CC13AF0B8E"
+            {
+            "SourcePath" = "8:..\\MelaninaPrata\\bin\\Debug\\Config\\config.xml"
+            "TargetName" = "8:config.xml"
+            "Tag" = "8:"
+            "Folder" = "8:_BC82ED737FE64FE08CB4352FF7E017EF"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_82E4D982F3EACB9773D0E36D4100C054"
             {
             "AssemblyRegister" = "3:1"
@@ -12116,6 +12142,17 @@
             "Property" = "8:TARGETDIR"
                 "Folders"
                 {
+                    "{9EF0B969-E518-4E46-987F-47570745A589}:_BC82ED737FE64FE08CB4352FF7E017EF"
+                    {
+                    "Name" = "8:Config"
+                    "AlwaysCreate" = "11:FALSE"
+                    "Condition" = "8:"
+                    "Transitive" = "11:FALSE"
+                    "Property" = "8:_0CBF7647E3254916921B89C38DD3EB34"
+                        "Folders"
+                        {
+                        }
+                    }
                 }
             }
             "{1525181F-901A-416C-8A58-119130FE478E}:_575B7C481D4743FAA83830BF86D7C0EA"
@@ -12157,7 +12194,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:MelaninaPrata"
         "ProductCode" = "8:{D500C685-5257-4520-B70C-CB872101AF95}"
-        "PackageCode" = "8:{3B019CEF-615C-4F01-AAE7-AC7AB0809690}"
+        "PackageCode" = "8:{406727DD-7D41-4603-9904-D6FCE7C162B6}"
         "UpgradeCode" = "8:{D4180975-8B7B-47D6-9F4D-67AB20E322E7}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
