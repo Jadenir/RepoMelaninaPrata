@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
+using System.Data.Entity.Core.EntityClient;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -26,7 +29,30 @@ namespace MelaninaPrata
         //Load
         private void Dashboard_Load(object sender, EventArgs e)
         {
+            DataSet dsConfig = new DataSet();
 
+            dsConfig.ReadXml(Application.StartupPath + "/config/config.xml");
+
+            String host = dsConfig.Tables["conexao"].Rows[0].Field<String>("host");
+            String banco = dsConfig.Tables["conexao"].Rows[0].Field<String>("banco");
+            String usuario = dsConfig.Tables["conexao"].Rows[0].Field<String>("usuario");
+            String senha = "&destroyer#";
+
+            String CONNECTION_STRING_NAME = "DBMelaninaEntities";
+            String ConnectionString = @"metadata = res://*/Models.MelaninaModel.csdl|res://*/Models.MelaninaModel.ssdl|res://*/Models.MelaninaModel.msl;provider=System.Data.SqlClient;provider connection string=';data source=" 
+                                      + host + ";initial catalog=" + banco + ";persist security info=True;user id=" 
+                                      + usuario + ";password="+ senha +";MultipleActiveResultSets=True;App=EntityFramework';";
+            EntityConnectionStringBuilder connectionBuilder = new EntityConnectionStringBuilder();
+            connectionBuilder.ConnectionString = ConnectionString;
+
+            //Update connection string within config file
+            Configuration config = ConfigurationManager.OpenExeConfiguration(Assembly.GetExecutingAssembly().Location);
+            ConnectionStringsSection section = (ConnectionStringsSection)config.GetSection("connectionStrings");
+            section.ConnectionStrings[CONNECTION_STRING_NAME].ConnectionString = connectionBuilder.ToString();
+
+            //Save changes
+            ConfigurationManager.RefreshSection("connectionStrings");
+            config.Save();
         }
         #endregion
 
