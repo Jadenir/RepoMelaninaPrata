@@ -124,10 +124,10 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.dgvVendedores.BackgroundColor = System.Drawing.Color.White;
             this.dgvVendedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVendedores.Location = new System.Drawing.Point(15, 82);
+            this.dgvVendedores.Location = new System.Drawing.Point(15, 109);
             this.dgvVendedores.Name = "dgvVendedores";
             this.dgvVendedores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvVendedores.Size = new System.Drawing.Size(773, 282);
+            this.dgvVendedores.Size = new System.Drawing.Size(773, 329);
             this.dgvVendedores.TabIndex = 27;
             this.dgvVendedores.TabStop = false;
             // 
@@ -136,7 +136,7 @@
             this.cmbStatus.DisplayMember = "uf";
             this.cmbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbStatus.FormattingEnabled = true;
-            this.cmbStatus.Location = new System.Drawing.Point(414, 55);
+            this.cmbStatus.Location = new System.Drawing.Point(77, 82);
             this.cmbStatus.Name = "cmbStatus";
             this.cmbStatus.Size = new System.Drawing.Size(136, 21);
             this.cmbStatus.TabIndex = 29;
@@ -145,7 +145,7 @@
             // lblStatus
             // 
             this.lblStatus.AutoSize = true;
-            this.lblStatus.Location = new System.Drawing.Point(371, 60);
+            this.lblStatus.Location = new System.Drawing.Point(12, 85);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(37, 13);
             this.lblStatus.TabIndex = 28;
