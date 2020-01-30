@@ -1341,6 +1341,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_7CBC5D363CFC4C57952D4E7134EC366B"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_7E87AEC2820129EF2E7C480429B7C1A1"
         "OwnerKey" = "8:_E8A200C1A9534A189BB19EE5B38364E1"
         "MsmSig" = "8:_UNDEFINED"
@@ -8036,6 +8042,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7CBC5D363CFC4C57952D4E7134EC366B"
+            {
+            "SourcePath" = "8:C:\\Users\\Jadenir\\Desktop\\Melanina.ico"
+            "TargetName" = "8:Melanina.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_035B6D8B1BDC4CBAB1AE4B040B11074E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_7E87AEC2820129EF2E7C480429B7C1A1"
             {
             "AssemblyRegister" = "3:1"
@@ -12194,7 +12220,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:MelaninaPrata"
         "ProductCode" = "8:{D500C685-5257-4520-B70C-CB872101AF95}"
-        "PackageCode" = "8:{406727DD-7D41-4603-9904-D6FCE7C162B6}"
+        "PackageCode" = "8:{04652DAE-38B1-48CC-BA77-44BD7672658B}"
         "UpgradeCode" = "8:{D4180975-8B7B-47D6-9F4D-67AB20E322E7}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -12314,6 +12340,20 @@
         }
         "Shortcut"
         {
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_418374E30446490CAFD864EA93EA76B6"
+            {
+            "Name" = "8:Melanina Prata"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_E8A200C1A9534A189BB19EE5B38364E1"
+            "Folder" = "8:_A53AFF5E4DFB49AA811EEF703B322F7D"
+            "WorkingFolder" = "8:_035B6D8B1BDC4CBAB1AE4B040B11074E"
+            "Icon" = "8:_7CBC5D363CFC4C57952D4E7134EC366B"
+            "Feature" = "8:"
+            }
         }
         "UserInterface"
         {

@@ -34,6 +34,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Melanina.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
@@ -260,6 +263,9 @@
     <Content Include="Assets\icons8-vérifier-25.png" />
     <Content Include="Assets\logo.jpeg" />
     <Content Include="Assets\logo2.jpg" />
+    <Content Include="Assets\Melanina.ico" />
+    <Content Include="Melanina.ico" />
+    <Content Include="MelaninaPrata.ico" />
     <Content Include="Models\MelaninaModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>MelaninaModel.Context.cs</LastGenOutput>
